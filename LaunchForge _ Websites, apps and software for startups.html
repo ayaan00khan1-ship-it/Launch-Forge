@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LaunchForge | Websites, apps and software for startups</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0B1020;--navy2:#121a33;--blue:#3B82F6;--violet:#8B5CF6;--lav:#EDE9FE;--gray:#F3F4F6;--muted:#a3abc4;--line:rgba(255,255,255,.1);--grad:linear-gradient(90deg,#3B82F6,#8B5CF6);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--navy);color:#fff;font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--lav);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.25rem}
+.logo svg{width:30px;height:30px}
+.links{display:flex;gap:28px;align-items:center;font-size:.92rem;color:var(--muted)}
+.links a:hover{color:#fff}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;font-weight:700;font-size:.95rem;border:1px solid transparent;cursor:pointer}
+.btn.p{background:var(--grad);color:#fff}
+.btn.p:hover{filter:brightness(1.1)}
+.btn.o{border-color:rgba(255,255,255,.3)}
+.btn.o:hover{background:rgba(255,255,255,.08)}
+.hero{position:relative;padding:72px 0 96px;background:radial-gradient(ellipse 60% 70% at 85% 30%,rgba(139,92,246,.28),transparent 70%),radial-gradient(ellipse 50% 60% at 10% 100%,rgba(59,130,246,.2),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+h1{font-size:clamp(2.4rem,5.5vw,4.2rem);line-height:1.08;margin:0 0 20px;font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:34em;margin:0 0 32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.tag{margin-top:40px;color:var(--muted);font-size:.85rem;letter-spacing:.3em}
+.mock{position:relative}
+.laptop{background:var(--navy2);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:0 30px 80px rgba(59,130,246,.25)}
+.bar{display:flex;gap:6px;margin-bottom:12px}.bar i{width:9px;height:9px;border-radius:50%;background:#2b3558}
+.scr{display:grid;grid-template-columns:70px 1fr;gap:12px;min-height:210px}
+.side{background:#0e1630;border-radius:8px}
+.main{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.row b{height:56px;border-radius:8px;background:#16204a}
+.row b:first-child{background:var(--grad)}
+.chart{border-radius:8px;background:#0e1630;display:flex;align-items:flex-end;gap:8px;padding:12px;min-height:100px}
+.chart i{flex:1;border-radius:4px 4px 0 0;background:linear-gradient(#8B5CF6,#3B82F6)}
+.phone{position:absolute;right:-12px;bottom:-34px;width:96px;border-radius:18px;background:var(--navy);border:2px solid #2b3558;padding:10px 8px;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.phone b{display:block;height:34px;border-radius:8px;background:var(--grad);margin-bottom:8px}
+.phone i{display:block;height:8px;border-radius:4px;background:#2b3558;margin-bottom:6px}
+section{padding:88px 0}
+.alt{background:var(--navy2)}
+h2{font-size:clamp(1.8rem,3.5vw,2.5rem);margin:0 0 12px;font-weight:800;letter-spacing:-.01em}
+.sub{color:var(--muted);max-width:36em;margin:0 0 48px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--navy);border:1px solid var(--line);border-radius:18px;padding:30px}
+.alt .card{background:var(--navy)}
+.ic{width:48px;height:48px;border-radius:12px;background:rgba(139,92,246,.18);display:grid;place-items:center;margin-bottom:18px}
+.ic svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{margin:0 0 8px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.why h3{margin:0 0 6px;font-size:1.02rem}
+.why p{margin:0;color:var(--muted);font-size:.9rem}
+.why .ic{margin-bottom:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{border-top:2px solid;border-image:var(--grad) 1;padding-top:20px}
+.step span{font-weight:800;font-size:1.5rem}
+.step h3{margin:6px 0 8px}
+.step p{margin:0;color:var(--muted);font-size:.95rem}
+.final{text-align:center;border-radius:28px;padding:64px 24px;background:radial-gradient(ellipse at 20% 0%,rgba(59,130,246,.35),transparent 60%),radial-gradient(ellipse at 90% 100%,rgba(139,92,246,.4),transparent 60%),var(--navy2);border:1px solid var(--line)}
+.final p{color:var(--muted);margin:0 auto 28px;max-width:30em}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){.hero .wrap,.grid3,.steps{grid-template-columns:1fr}.why{grid-template-columns:1fr 1fr}.links a:not(.btn){display:none}.mock{margin-bottom:40px}}
+@media(max-width:480px){.why{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:no-preference){.hero .mock{animation:rise .9s ease-out both}@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient>
+<symbol id="rk" viewBox="0 0 32 32"><path d="M26 3c-8 1-14 6-17 14l6 6c8-3 13-9 14-17z" fill="url(#g)"/><path d="M8 18l-4 1-2 6 5-2zM14 24l-1 4-6 2 2-5z" fill="#8B5CF6"/><circle cx="19" cy="13" r="2.2" fill="#0B1020"/></symbol></defs></svg>
+
+<header class="wrap">
+<nav aria-label="Main">
+<a class="logo" href="#top"><svg><use href="#rk"/></svg><span>Launch<span class="grad">Forge</span></span></a>
+<div class="links"><a href="#services">Services</a><a href="#why">Why us</a><a href="#process">Process</a><a class="btn p" href="#contact">Get started</a></div>
+</nav>
+</header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Ideas into<br><span class="grad">Digital Products.</span></h1>
+<p>We build modern websites, mobile apps and custom software for startups that dare to dream. Fast, reliable and ready to scale with you.</p>
+<div class="cta"><a class="btn p" href="#contact">Start your project</a><a class="btn o" href="#services">See what we build</a></div>
+<div class="tag">BUILD / LAUNCH / SCALE</div>
+</div>
+<div class="mock" aria-hidden="true">
+<div class="laptop"><div class="bar"><i></i><i></i><i></i></div>
+<div class="scr"><div class="side"></div><div class="main"><div class="row"><b></b><b></b><b></b></div><div class="chart"><i style="height:30%"></i><i style="height:48%"></i><i style="height:40%"></i><i style="height:68%"></i><i style="height:58%"></i><i style="height:86%"></i><i style="height:100%"></i></div></div></div></div>
+<div class="phone"><b></b><i></i><i style="width:70%"></i><i></i><i style="width:50%"></i></div>
+</div>
+</div></div>
+
+<section id="services"><div class="wrap">
+<h2>What we build</h2>
+<p class="sub">Three things, done properly, for founders who need to move fast.</p>
+<div class="grid3">
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div><h3>Website Development</h3><p>Business websites, e-commerce stores and landing pages that load fast and turn visitors into customers.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div><h3>Mobile App Development</h3><p>iOS and Android apps for startups and businesses, from first prototype to store launch.</p></div>
+<div class="card"><div class="ic"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1A4.5 4.5 0 0117 18z"/></svg></div><h3>Custom Software</h3><p>SaaS products, dashboards, APIs and internal tools built around how your business works.</p></div>
+</div></div></section>
+
+<section id="why" class="alt"><div class="wrap">
+<h2>Built for founders, by people who get it</h2>
+<p class="sub">We are not just developers. We are your product partners, from the first line of code to your big launch.</p>
+<div class="why">
+<div><div class="ic"><svg viewBox="0 0 24 24"><use href="#rk"/></svg></div><h3>Startup friendly</h3><p>We understand your challenges, budgets and deadlines.</p></div>
+<div><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 00-4 12.7V16h8v-1.3A7 7 0 0012 2z"/></svg></div><h3>Idea to product</h3><p>Turn your vision into a working product, step by step.</p></div>
+<div><div class="ic"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 5a3 3 0 010 6M18 14c2 .6 3 2.5 3 6"/></svg></div><h3>Transparent process</h3><p>Clear timelines and regular updates. No surprises.</p></div>
+<div><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Long-term partner</h3><p>Your success is our success. We stay after launch.</p></div>
+</div></div></section>
+
+<section id="process"><div class="wrap">
+<h2>How we work</h2>
+<p class="sub">A simple three-stage process, so you always know what comes next.</p>
+<div class="steps">
+<div class="step"><span class="grad">1. Build</span><h3>Plan and design</h3><p>We map your idea, agree on scope and price, then design and build it with regular check-ins.</p></div>
+<div class="step"><span class="grad">2. Launch</span><h3>Test and go live</h3><p>We test on real devices, set up hosting and domain, and take your product live.</p></div>
+<div class="step"><span class="grad">3. Scale</span><h3>Grow with you</h3><p>New features, performance and support as your users and your team grow.</p></div>
+</div></div></section>
+
+<section id="contact" style="padding-top:0"><div class="wrap">
+<div class="final">
+<h2>Let's build your <span class="grad">next big thing.</span></h2>
+<p>Tell us about your idea. We will reply within 24 hours with a plan and a quote.</p>
+<div class="cta" style="justify-content:center"><a class="btn p" href="https://wa.me/919315281752?text=Hi%20LaunchForge%2C%20I%20want%20a%20website%20for%20my%20startup">Chat on WhatsApp</a><a class="btn o" href="mailto:hello@launchforge.in">hello@launchforge.in</a></div>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 LaunchForge. Build / Launch / Scale.</span><span>www.launchforge.in</span></div></footer>
+</body>
+</html>
